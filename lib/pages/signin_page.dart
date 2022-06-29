@@ -20,7 +20,8 @@ class signin extends StatelessWidget {
               "assets/images/background.png",
               width: size.width * 0.35,
             ),
-          ),Positioned(
+          ),
+          Positioned(
             top: 0,
             left: 0,
             child: Image.asset(
