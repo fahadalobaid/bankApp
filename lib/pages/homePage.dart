@@ -13,7 +13,15 @@ class homePage extends StatelessWidget {
       ),
       home: Scaffold(
         backgroundColor: Colors.blueAccent,
-        appBar: AppBar(title: Text("Home")),
+        appBar: AppBar(
+          title: Text(
+            "Transactions",
+            style: TextStyle(color: Color.fromARGB(255, 175, 152, 83)),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.lightBlueAccent,
+        ),
+        
       ),
     );
   }
