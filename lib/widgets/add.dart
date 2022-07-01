@@ -1,10 +1,11 @@
 import 'dart:io';
 
+import 'package:bank_app/models/user.dart';
+import 'package:bank_app/providers/authProvider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 
 class AddUserForm extends StatefulWidget {
   AddUserForm({Key? key}) : super(key: key);
@@ -105,7 +106,7 @@ class _AddUserFormState extends State<AddUserForm> {
                   _formKey.currentState!.save();
                 }
 
-                ;
+                context.read<AuthProvider>().signup(User(username: username));
               },
               child: const Text("Submit"),
             ),

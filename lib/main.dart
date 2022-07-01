@@ -1,12 +1,17 @@
 import 'package:bank_app/pages/homePage.dart';
 import 'package:bank_app/pages/signup_page.dart';
 import 'package:bank_app/pages/welcome_page.dart';
+import 'package:bank_app/providers/authProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import "package:image_picker/image_picker.dart";
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  ChangeNotifierProvider(
+    create: (context) => AuthProvider(),
+    child: MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -26,7 +31,7 @@ class MyApp extends StatelessWidget {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const HomePage(),
+        builder: (context, state) => HomePage(),
       ),
       GoRoute(
         path: '/signup',
