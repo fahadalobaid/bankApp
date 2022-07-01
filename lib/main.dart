@@ -1,4 +1,7 @@
+
+
 import 'package:bank_app/pages/homePage.dart';
+import 'package:bank_app/pages/signin_page.dart';
 import 'package:bank_app/pages/signup_page.dart';
 import 'package:bank_app/pages/welcome_page.dart';
 import 'package:bank_app/providers/authProvider.dart';
@@ -7,12 +10,13 @@ import 'package:go_router/go_router.dart';
 import "package:image_picker/image_picker.dart";
 import 'package:provider/provider.dart';
 
-void main() {
-  ChangeNotifierProvider(
+void main() { runApp(MyApp());
+    ChangeNotifierProvider(
     create: (context) => AuthProvider(),
     child: MyApp(),
   );
 }
+
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
@@ -20,22 +24,33 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+     ChangeNotifierProvider(
+    create: (context) => AuthProvider(),
+    child: MyApp(),
+  );
     return MaterialApp.router(
+
+      
       routeInformationParser: _router.routeInformationParser,
       routerDelegate: _router.routerDelegate,
       routeInformationProvider: _router.routeInformationProvider,
     );
+
   }
 
   final _router = GoRouter(
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => HomePage(),
+        builder: (context, state) =>  welcomePage(),
       ),
       GoRoute(
         path: '/signup',
         builder: (context, state) => SignupPage(),
+      ),
+      GoRoute(
+        path: '/signup',
+        builder: (context, state) => SigninPage(),
       ),
     ],
   );
