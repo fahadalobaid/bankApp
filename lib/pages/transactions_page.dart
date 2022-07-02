@@ -14,13 +14,19 @@ class TransactionPage extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 100, 152, 241),
         title: Text("Transactions List"),
       ),
-      body: ListView.builder(
-      itemCount: Transactions.t.length,
-      itemBuilder: (context,index)  {
-       return Text("Hello")
-      }
-      ),
       
-    );
-  }
-}
+      
+      
+      
+      
+     // body: ListView.builder(
+     // itemCount: Transactions.t.length,
+      //itemBuilder: (context,index)  {
+      // return Text("Hello")
+    
+    
+    
+    
+    
+    );  }
+} // REMOVE THESE TWO AFTER UNCOMMENTING!!!
