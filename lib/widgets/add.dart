@@ -106,9 +106,11 @@ class _AddUserFormState extends State<AddUserForm> {
                   _formKey.currentState!.save();
                 }
 
-                context.read<AuthProvider>().signup(User(username: username));
+                context
+                    .read<AuthProvider>()
+                    .signup(User(username: username, password: password));
               },
-              child: const Text("Submit"),
+              child: const Text("Signup"),
             ),
           )
         ],

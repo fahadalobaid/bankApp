@@ -28,7 +28,6 @@ class _MyHomePageState extends State<HomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Center(child: Card()),
     Text(
       'Index 1: Business',
       style: optionStyle,

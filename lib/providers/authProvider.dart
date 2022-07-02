@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class AuthProvider extends ChangeNotifier {
   late User user;
+  late String token;
 
-  void signup(User user) {
-    ClientServices().signup(user: user);
+  void signup(User user) async {
+    token = await ClientServices().signup(user: user);
   }
 }

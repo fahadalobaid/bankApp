@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'user.g.dart';
@@ -36,8 +37,7 @@ class User {
     );
   }
 
-  String toJson() => json.encode(toMap());
-
   factory User.fromJson(String source) =>
       User.fromMap(json.decode(source) as Map<String, dynamic>);
+  String toJson() => json.encode(toMap());
 }
