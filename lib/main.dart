@@ -11,7 +11,7 @@ import "package:image_picker/image_picker.dart";
 import 'package:provider/provider.dart';
 
 void main() { runApp(MyApp());
-    ChangeNotifierProvider(
+       ChangeNotifierProvider(
     create: (context) => AuthProvider(),
     child: MyApp(),
   );
@@ -24,10 +24,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-     ChangeNotifierProvider(
-    create: (context) => AuthProvider(),
-    child: MyApp(),
-  );
     return MaterialApp.router(
 
       
